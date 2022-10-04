@@ -11,6 +11,7 @@
     <Property Name="Weight" Type="smallint" Nullable="false" />
     <Property Name="Cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="DishCategoryID" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityType Name="DishCategory">
     <Key>

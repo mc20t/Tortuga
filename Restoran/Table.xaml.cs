@@ -22,8 +22,7 @@ namespace Restoran
 
         private void TblBtn_Click1(object sender, RoutedEventArgs e)
         {
-            TableList = AppData.Context.Tables.ToList();
-            NavigationService.Navigate(new Menu(Convert.ToInt32(TableList[0])));
+            NavigationService.Navigate(new Menu(1));
         }
 
         private void TblBtn_Click2(object sender, RoutedEventArgs e)

@@ -4,6 +4,7 @@
     <EntitySetMapping Name="Dish">
       <EntityTypeMapping TypeName="TortugaDBModel.Dish">
         <MappingFragment StoreEntitySet="Dish">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Title" ColumnName="Title" />
           <ScalarProperty Name="Compound" ColumnName="Compound" />

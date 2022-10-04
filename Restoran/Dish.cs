@@ -27,6 +27,7 @@ namespace Restoran
         public short Weight { get; set; }
         public decimal Cost { get; set; }
         public int DishCategoryID { get; set; }
+        public string Photo { get; set; }
     
         public virtual DishCategory DishCategory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -5,14 +5,18 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Restoran"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="Меню">
 
-    <Grid Background="Wheat">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/restoranphoto.jpg"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="159*"/>
-            <ColumnDefinition Width="130*"/>
-            <ColumnDefinition Width="511*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -24,18 +28,93 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Меню" 
                    FontSize="40"
-                   Background="Brown"
                    TextAlignment="Center" 
                    Foreground="White" 
-                   Grid.ColumnSpan="3"/>
-        <TextBlock Text="Столик" 
-                   FontSize="40"
-                   Grid.Row="1"/>
+                   Grid.ColumnSpan="4">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="/wood.jpg"/>
+            </TextBlock.Background>
+        </TextBlock>
         <TextBlock x:Name="TblNum"
-                   Text="xx" 
-                   FontSize="40"
-                   Grid.Row="1"
-                   Grid.Column="1"/>
+                   Text="Столик xx" 
+                   FontSize="30"
+                   Foreground="White"
+                   Grid.Row="5" 
+                   Margin="10"
+                   Background="Brown"
+                   Grid.Column="1"
+                   TextAlignment="Center"/>
 
+        <ListView x:Name="lvDish"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Grid.RowSpan="4"
+                  Grid.ColumnSpan="2"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+                    <Border
+                            Height="200"
+                            Width="300"
+                            Margin="10"
+                            BorderThickness="1"
+                            CornerRadius="10">
+                        <Border.Background>
+                            <ImageBrush ImageSource="/wood.jpg"/>
+                        </Border.Background>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <Image Source="{Binding Path=Photo}"
+                                   Grid.ColumnSpan="3"
+                                   Grid.RowSpan="4" />
+
+                            <TextBlock Text="{Binding Path=Title}"
+                                       Grid.Row="4"
+                                       Grid.ColumnSpan="2"
+                                       Foreground="White"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0"/>
+
+                            <TextBlock Text="{Binding Path=Cost}"
+                                       Grid.Column="3"
+                                       Grid.Row="4"
+                                       Foreground="White"
+                                       HorizontalAlignment="Right"
+                                       VerticalAlignment="Center"
+                                       Margin="0 0 10 0"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        <Button Name="nextBtn"
+                Grid.Column="2"
+                Grid.Row="5"
+                Content="Далее"
+                Margin="10"
+                FontSize="30" 
+                Click="nextBtn_Click"/>
     </Grid>
 </Page>

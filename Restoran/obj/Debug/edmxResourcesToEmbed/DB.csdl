@@ -13,6 +13,7 @@
     <Property Name="DishCategoryID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="DishCategory" Relationship="Self.FK_Dish_DishCategory" FromRole="Dish" ToRole="DishCategory" />
     <NavigationProperty Name="OrderDish" Relationship="Self.FK_OrderDish_Dish" FromRole="Dish" ToRole="OrderDish" />
+    <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="DishCategory">
     <Key>

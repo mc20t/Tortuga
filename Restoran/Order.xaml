@@ -5,10 +5,20 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Restoran"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="Оформление заказа">
 
-    <Grid Background="Wheat">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/restoranphoto.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
@@ -19,9 +29,58 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Оформление заказа" 
                    FontSize="40"
-                   Background="Brown"
                    TextAlignment="Center" 
-                   Foreground="White"/>
+                   Foreground="White"
+                   Grid.ColumnSpan="5">
+            <TextBlock.Background>
+                <ImageBrush ImageSource="/wood.jpg"/>
+            </TextBlock.Background>
+        </TextBlock>
+
+        <ListView x:Name="lvOrder"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  Grid.Row="1" 
+                  Grid.Column="1"
+                  Grid.RowSpan="4"
+                  Background="#B2000000"
+                  Grid.ColumnSpan="3" 
+                  Foreground="Cyan">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Номер" 
+                                    Width="50" 
+                                    DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Header="Название" 
+                                    Width="200" 
+                                    DisplayMemberBinding="{Binding Dish.Title}"/>
+                    <GridViewColumn Header="Цена" 
+                                    Width="100" 
+                                    DisplayMemberBinding="{Binding Dish.Cost}"/>
+                    <GridViewColumn Header="Кол-во" 
+                                    Width="100" 
+                                    DisplayMemberBinding="{Binding Count}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        
+        
+        <TextBlock Text="Итог: 5612.00 Руб."
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="5"
+                   FontSize="30"
+                   Margin="5"
+                   Background="LightGray"
+                   TextAlignment="Center"/>
+        <Button x:Name="PayBtn"
+                Content="Заказать"
+                Grid.Column="3"
+                Grid.Row="5"
+                Margin="5"
+                Foreground="White"
+                FontSize="30"
+                Background="green"
+                Click="PayBtn_Click"/>
 
     </Grid>
 </Page>
