@@ -8,5 +8,6 @@ namespace Restoran
 {
     internal class Basket
     {
+        List<Dish> DishList = new List<Dish>();
     }
 }
