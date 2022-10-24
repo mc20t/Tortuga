@@ -13,7 +13,6 @@ namespace Restoran
         public Order()
         {
             InitializeComponent();
-
             Filter();
         }
 
@@ -49,6 +48,12 @@ namespace Restoran
             //}
 
             lvOrder.ItemsSource = OrderList;
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Basket basket = new Basket();
+            NavigationService.Navigate(new Menu(basket.TableNumber));
         }
     }
 }

@@ -5,9 +5,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Navigation;
-using static Restoran.AppData;
-using static Restoran.Tables;
-using static Restoran.TortugaDBEntities1;
 
 namespace Restoran
 {
@@ -20,129 +17,135 @@ namespace Restoran
             InitializeComponent();
         }
 
+        public void Next(int tn)
+        {
+            Basket basket = new Basket();
+            NavigationService.Navigate(new Menu(basket.NextTable(tn)));
+        }
+
         private void TblBtn_Click1(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(1));
+            Next(1);
         }
 
         private void TblBtn_Click2(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(2));
+            Next(2);
         }
 
         private void TblBtn_Click3(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(3));
+            Next(3);
         }
 
         private void TblBtn_Click4(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(4));
+            Next(4);
         }
 
         private void TblBtn_Click5(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(5));
+            Next(5);
         }
 
         private void TblBtn_Click6(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(6));
+            Next(6);
         }
 
         private void TblBtn_Click7(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(7));
+            Next(7);
         }
 
         private void TblBtn_Click8(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(8));
+            Next(8);
         }
 
         private void TblBtn_Click9(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(9));
+            Next(9);
         }
 
         private void TblBtn_Click10(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(10));
+            Next(10);
         }
 
         private void TblBtn_Click11(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(11));
+            Next(11);
         }
 
         private void TblBtn_Click12(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(12));
+            Next(12);
         }
 
         private void TblBtn_Click13(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(13));
+            Next(13);
         }
 
         private void TblBtn_Click14(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(14));
+            Next(14);
         }
 
         private void TblBtn_Click15(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(15));
+            Next(15);
         }
 
         private void TblBtn_Click16(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(16));
+            Next(16);
         }
 
         private void TblBtn_Click17(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(17));
+            Next(17);
         }
 
         private void TblBtn_Click18(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(18));
+            Next(18);
         }
 
         private void TblBtn_Click19(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(19));
+            Next(19);
         }
 
         private void TblBtn_Click20(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(20));
+            Next(20);
         }
 
         private void TblBtn_Click21(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(21));
+            Next(21);
         }
 
         private void TblBtn_Click22(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(22));
+            Next(22);
         }
 
         private void TblBtn_Click23(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(23));
+            Next(23);
         }
 
         private void TblBtn_Click24(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(24));
+            Next(24);
         }
 
         private void TblBtn_Click25(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Menu(25));
+            Next(25);
         }
 
 

@@ -10,7 +10,10 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/restoranphoto.jpg"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFFF9685" Offset="1"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -35,22 +38,16 @@
                 <ImageBrush ImageSource="/wood.jpg"/>
             </TextBlock.Background>
         </TextBlock>
-        <TextBlock x:Name="TblNum"
-                   Text="Столик xx" 
-                   FontSize="30"
-                   Foreground="White"
-                   Grid.Row="5" 
-                   Margin="10"
-                   Background="Brown"
-                   Grid.Column="1"
-                   TextAlignment="Center"/>
 
         <ListView x:Name="lvDish"
                   Grid.Row="1"
-                  Grid.Column="1"
                   Grid.RowSpan="4"
-                  Grid.ColumnSpan="2"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+                  Grid.ColumnSpan="4"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                  Background="{x:Null}" 
+                  BorderBrush="{x:Null}" 
+                  Foreground="{x:Null}"
+                  SelectionChanged="lvDish_SelectionChanged">
 
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -65,10 +62,7 @@
                             Width="300"
                             Margin="10"
                             BorderThickness="1"
-                            CornerRadius="10">
-                        <Border.Background>
-                            <ImageBrush ImageSource="/wood.jpg"/>
-                        </Border.Background>
+                            CornerRadius="10" Background="White">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
@@ -85,7 +79,7 @@
 
                             <Image Source="{Binding Path=Photo}"
                                    Grid.ColumnSpan="3"
-                                   Grid.RowSpan="4" />
+                                   Grid.RowSpan="5" />
 
                             <TextBlock Text="{Binding Path=Title}"
                                        Grid.Row="4"
@@ -93,11 +87,20 @@
                                        Foreground="White"
                                        HorizontalAlignment="Left"
                                        VerticalAlignment="Center"
-                                       Margin="10 0 0 0"/>
-
+                                       Margin="10 0 0 0" 
+                                       Background="#B2000000"/>
+                            <TextBlock Text="{Binding Path=OrderDish.Count}"
+                                       FontSize="20"
+                                       Grid.Column="1"
+                                       Foreground="White"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Margin="10 0 0 0" 
+                                       Background="#B2000000"/>
                             <TextBlock Text="{Binding Path=Cost}"
                                        Grid.Column="3"
                                        Grid.Row="4"
+                                       Background="#B2000000"
                                        Foreground="White"
                                        HorizontalAlignment="Right"
                                        VerticalAlignment="Center"
@@ -106,15 +109,48 @@
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
         </ListView>
 
+        <TextBlock x:Name="TblNum"
+                   Text="Столик xx" 
+                   FontSize="30"
+                   Grid.Row="5" 
+                   Margin="10"
+                   Grid.Column="1"
+                   TextAlignment="Center"/>
+        <WrapPanel Grid.Column="2"
+                   Grid.Row="5"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center">
+            <Button Height="40"
+                    Width="40"
+                    Margin="5"
+                    Content="-"
+                    FontSize="30"/>
+            <TextBlock Text="Кол-во"
+                       Margin="5"
+                       Height="40"
+                       Width="auto"
+                       FontSize="20"
+                       TextAlignment="Center"/>
+            <Button Margin="5"
+                    Height="40"
+                    Width="40"
+                    Content="+"
+                    FontSize="30"/>
+        </WrapPanel>
         <Button Name="nextBtn"
-                Grid.Column="2"
+                Grid.Column="3"
                 Grid.Row="5"
                 Content="Далее"
                 Margin="10"
                 FontSize="30" 
                 Click="nextBtn_Click"/>
+        <Button x:Name="ExitBtn"
+                Grid.Row="5"
+                Content="Назад"
+                Margin="10"
+                FontSize="30" 
+                Click="ExitBtn_Click"/>
     </Grid>
 </Page>

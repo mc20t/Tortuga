@@ -62,13 +62,18 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
-        
-        <TextBlock Text="Итог: 5612.00 Руб."
-                   Grid.Column="1"
-                   Grid.ColumnSpan="2"
+
+        <Button x:Name="ExitBtn"
+                Grid.Row="5"
+                Grid.Column="1"
+                Content="Назад"
+                Margin="10"
+                FontSize="30" 
+                Click="ExitBtn_Click"/>
+        <TextBlock Text="Итог:&#xA;5612.00 Руб."
+                   Grid.Column="2"
                    Grid.Row="5"
-                   FontSize="30"
+                   FontSize="25"
                    Margin="5"
                    Background="LightGray"
                    TextAlignment="Center"/>

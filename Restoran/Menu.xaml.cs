@@ -54,5 +54,33 @@ namespace Restoran
 
             lvDish.ItemsSource = DishList;
         }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Table());
+        }
+
+        private void lvDish_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //var vvv = new OrderDish();
+            //if (lvDish.SelectedItem is OrderDish)
+            //{
+            //    vvv = lvDish.SelectedItem as OrderDish;
+            //}
+
+            //this.Opacity = 0.2;
+            //lvDish.ItemsSource = AppData.Context.OrderDish.ToList();
+            //this.Opacity = 1;
+
+
+            //OrderDish orderDish = new OrderDish();
+
+            //orderDish.Count++;
+
+            //AppData.Context.OrderDish.Add(orderDish);
+            //AppData.Context.SaveChanges();
+
+            //Filter();
+        }
     }
 }
