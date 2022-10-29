@@ -1,19 +1,23 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+using System.Windows.Input;
 
 namespace Restoran
 {
     public partial class Menu : Page
     {
         List<Dish> DishList = new List<Dish>();
+        public int tn;
 
         public Menu(int a)
         {
             InitializeComponent();
             TblNum.Text = "Столик " + a;
+            tn = a;
 
             //cmbSort.ItemsSource = listSort;
             //cmbSort.SelectedIndex = 0;
@@ -23,7 +27,7 @@ namespace Restoran
 
         private void nextBtn_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Order());
+            NavigationService.Navigate(new Order(tn));
         }
 
         private void Filter()
@@ -81,6 +85,33 @@ namespace Restoran
             //AppData.Context.SaveChanges();
 
             //Filter();
+        }
+
+        private void lvDish_KeyUp(object sender, KeyEventArgs e)
+        {
+            //if (e.Key == Key.Space)
+            //{
+            //    if (lvDish.SelectedItem is Dish && lvDish.SelectedIndex != -1)
+            //    {
+            //        try
+            //        {
+            //            var item = lvDish.SelectedItem as Dish;
+            //            OrderDish newOrderDish = new OrderDish();
+            //            newOrderDish.DishID = item;
+            //            AppData.Context.OrderDish.Add(newOrderDish);
+            //            AppData.Context.SaveChanges();
+            //            Filter();
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            MessageBox.Show(ex.Message.ToString());
+            //        }
+            //    }
+            //}
+            //else if (e.Key == Key.Space)
+            //{
+
+            //}
         }
     }
 }

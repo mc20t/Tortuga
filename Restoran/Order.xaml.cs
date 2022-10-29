@@ -9,10 +9,13 @@ namespace Restoran
     public partial class Order : Page
     {
         List<OrderDish> OrderList = new List<OrderDish>();
+        public int tn;
 
-        public Order()
+        public Order(int a)
         {
             InitializeComponent();
+            tn = a;
+            TblNum.Text = "Столик\n" + a;
             Filter();
         }
 
@@ -52,8 +55,7 @@ namespace Restoran
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            Basket basket = new Basket();
-            NavigationService.Navigate(new Menu(basket.TableNumber));
+            NavigationService.Navigate(new Menu(tn));
         }
     }
 }

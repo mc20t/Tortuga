@@ -44,6 +44,7 @@
                   Grid.RowSpan="4"
                   Grid.ColumnSpan="4"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                  KeyUp="lvDish_KeyUp"
                   Background="{x:Null}" 
                   BorderBrush="{x:Null}" 
                   Foreground="{x:Null}"

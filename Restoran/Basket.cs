@@ -9,12 +9,5 @@ namespace Restoran
     internal class Basket
     {
         List<Dish> DishList = new List<Dish>();
-        public int TableNumber;
-
-        public int NextTable(int NT)
-        {
-            TableNumber = NT;
-            return TableNumber;
-        }
     }
 }

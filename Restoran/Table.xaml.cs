@@ -19,8 +19,7 @@ namespace Restoran
 
         public void Next(int tn)
         {
-            Basket basket = new Basket();
-            NavigationService.Navigate(new Menu(basket.NextTable(tn)));
+            NavigationService.Navigate(new Menu(tn));
         }
 
         private void TblBtn_Click1(object sender, RoutedEventArgs e)
