@@ -175,6 +175,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="plan.jpg" />
     <Resource Include="1.jpg" />
     <Resource Include="2.jpg" />
     <Resource Include="10.jpg" />

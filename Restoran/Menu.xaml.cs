@@ -19,10 +19,15 @@ namespace Restoran
             TblNum.Text = "Столик " + a;
             tn = a;
 
-            //cmbSort.ItemsSource = listSort;
-            //cmbSort.SelectedIndex = 0;
+            cmbSort.ItemsSource = new List<String> { "По умолчанию", "Название", "Цена" };
 
             Filter();
+        }
+
+        public void Discount()
+        {
+            DishList = AppData.Context.Dish.ToList();
+            //DishList.
         }
 
         private void nextBtn_Click(object sender, RoutedEventArgs e)
@@ -33,28 +38,27 @@ namespace Restoran
         private void Filter()
         {
             DishList = AppData.Context.Dish.ToList();
-            //DishList = DishList.     //ПОИСК
-            //    Where(i =>
-            //        i.ID.ToString().ToLower().Contains(txtSearch.Text.ToLower()) ||
-            //        i.Title.ToLower().Contains(txtSearch.Text.ToLower()) ||
-            //        i.Cost.ToString().ToLower().Contains(txtSearch.Text.ToLower())
-            //    ).ToList();
+            DishList = DishList.     //ПОИСК
+                Where(i =>
+                    i.Title.ToLower().Contains(txtSearch.Text.ToLower()) ||
+                    i.Cost.ToString().ToLower().Contains(txtSearch.Text.ToLower())
+                ).ToList();
 
-            //switch (cmbSort.SelectedIndex)      //СОРТИРОВКА
-            //{
-            //    case 0:
-            //        DishList = DishList.OrderBy(i => i.ID).ToList();
-            //        break;
-            //    case 1:
-            //        DishList = DishList.OrderBy(i => i.Title).ToList();
-            //        break;
-            //    case 2:
-            //        DishList = DishList.OrderBy(i => i.Cost).ToList();
-            //        break;
-            //    default:
-            //        DishList = DishList.OrderBy(i => i.ID).ToList();
-            //        break;
-            //}
+            switch (cmbSort.SelectedIndex)      //СОРТИРОВКА
+            {
+                case 0:
+                    DishList = DishList.OrderBy(i => i.ID).ToList();
+                    break;
+                case 1:
+                    DishList = DishList.OrderBy(i => i.Title).ToList();
+                    break;
+                case 2:
+                    DishList = DishList.OrderBy(i => i.Cost).ToList();
+                    break;
+                default:
+                    DishList = DishList.OrderBy(i => i.ID).ToList();
+                    break;
+            }
 
             lvDish.ItemsSource = DishList;
         }
@@ -112,6 +116,16 @@ namespace Restoran
             //{
 
             //}
+        }
+
+        private void CmbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Filter();
+        }
+
+        private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Filter();
         }
     }
 }

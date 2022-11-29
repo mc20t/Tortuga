@@ -29,6 +29,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
         <TextBlock Text="Меню" 
                    FontSize="40"
                    TextAlignment="Center" 
@@ -38,6 +39,28 @@
                 <ImageBrush ImageSource="/wood.jpg"/>
             </TextBlock.Background>
         </TextBlock>
+
+        <WrapPanel Grid.ColumnSpan="2"
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Left">
+            <TextBlock Text="Поиск"
+                       Foreground="White"
+                       Margin="70 0 10 0"
+                       FontSize="18"/>
+            <TextBox x:Name="txtSearch"
+                     Width="150"
+                     FontSize="18"
+                     TextChanged="TxtSearch_TextChanged"/>
+        </WrapPanel>
+        
+        <ComboBox x:Name="cmbSort"
+                  Width="150"
+                  Margin="100 0"
+                  Grid.ColumnSpan="2"
+                  Grid.Column="2"
+                  VerticalAlignment="Center" 
+                  HorizontalAlignment="Right"
+                  SelectionChanged="CmbSort_SelectionChanged"/>
 
         <ListView x:Name="lvDish"
                   Grid.Row="1"
@@ -49,14 +72,12 @@
                   BorderBrush="{x:Null}" 
                   Foreground="{x:Null}"
                   SelectionChanged="lvDish_SelectionChanged">
-
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
                 </ItemsPanelTemplate>
             </ListView.ItemsPanel>
             <ListView.ItemTemplate>
-
                 <DataTemplate>
                     <Border
                             Height="200"

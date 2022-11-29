@@ -44,7 +44,7 @@
                    Grid.RowSpan="2"
                    Height="80"
                    Width="130"
-                   Background="#7FCCCCCC"
+                   Background="#9FCCCCCC"
                    TextAlignment="Center"/>
 
         <ListView x:Name="lvOrder"

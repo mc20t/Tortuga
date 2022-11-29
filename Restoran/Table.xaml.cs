@@ -96,57 +96,5 @@ namespace Restoran
         {
             Next(15);
         }
-
-        private void TblBtn_Click16(object sender, RoutedEventArgs e)
-        {
-            Next(16);
-        }
-
-        private void TblBtn_Click17(object sender, RoutedEventArgs e)
-        {
-            Next(17);
-        }
-
-        private void TblBtn_Click18(object sender, RoutedEventArgs e)
-        {
-            Next(18);
-        }
-
-        private void TblBtn_Click19(object sender, RoutedEventArgs e)
-        {
-            Next(19);
-        }
-
-        private void TblBtn_Click20(object sender, RoutedEventArgs e)
-        {
-            Next(20);
-        }
-
-        private void TblBtn_Click21(object sender, RoutedEventArgs e)
-        {
-            Next(21);
-        }
-
-        private void TblBtn_Click22(object sender, RoutedEventArgs e)
-        {
-            Next(22);
-        }
-
-        private void TblBtn_Click23(object sender, RoutedEventArgs e)
-        {
-            Next(23);
-        }
-
-        private void TblBtn_Click24(object sender, RoutedEventArgs e)
-        {
-            Next(24);
-        }
-
-        private void TblBtn_Click25(object sender, RoutedEventArgs e)
-        {
-            Next(25);
-        }
-
-
     }
 }

@@ -8,304 +8,187 @@
       d:DesignHeight="500" d:DesignWidth="800"
       Title="Выбор столика">
 
-    <Grid>
+    <Grid Width="800" Height="500">
         <Grid.Background>
-            <ImageBrush ImageSource="/restoranphoto.jpg" Stretch="Fill"/>
+            <ImageBrush ImageSource="/plan.jpg" Stretch="Fill"/>
         </Grid.Background>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="107*"/>
         </Grid.RowDefinitions>
         <TextBlock Text="Выбор столика" 
                    FontSize="40"
                    TextAlignment="Center" 
-                   Foreground="White" 
-                   Grid.ColumnSpan="5">
+                   Foreground="White">
             <TextBlock.Background>
                 <ImageBrush ImageSource="/wood.jpg"/>
             </TextBlock.Background>
         </TextBlock>
+
         <Button x:Name="TblBtn1"
                 Grid.Row="1"
                 Content="1"
-                FontSize="30"
-                Margin="10" 
+                FontSize="10"
+                Height="20"
+                Width="20"
                 Click="TblBtn_Click1" 
                 Opacity="0.7" 
                 Visibility="Visible" 
                 FontWeight="Bold" 
-                FontStyle="Italic">
+                FontStyle="Italic" Margin="595,214,185,194">
         </Button>
         <Button x:Name="TblBtn2"
                 Grid.Row="1"
-                Grid.Column="1"
                 Content="2"
-                FontSize="30" 
+                FontSize="10" 
                 Opacity="0.7" 
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click2"/>
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click2" Margin="527,207,253,201"/>
         <Button x:Name="TblBtn3"
                 Grid.Row="1"
-                Grid.Column="2"
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Content="3"
-                FontSize="30" 
+                FontSize="10" 
                 Opacity="0.7" 
                 Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click3"/>
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click3" Margin="598,129,182,279"/>
         <Button x:Name="TblBtn4"
                 Grid.Row="1"
-                Grid.Column="3"
                 Content="4"
-                FontSize="30"
-                Margin="10"  
+                FontSize="10"
+                Height="20"
+                Width="20"
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Opacity="0.7" 
                 Visibility="Visible"
-                Click="TblBtn_Click4"/>
+                Click="TblBtn_Click4" Margin="520,115,260,293"/>
         <Button x:Name="TblBtn5"
                 Grid.Row="1"
-                Grid.Column="4"
                 Content="5" 
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Opacity="0.7" 
                 Visibility="Visible"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click5"/>
+                FontSize="10"
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click5" Margin="443,299,337,109"/>
         <Button x:Name="TblBtn6"
-                Grid.Row="2" 
+                Grid.Row="1" 
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Opacity="0.7" 
                 Visibility="Visible"
                 Content="6"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click6"/>
+                FontSize="10"
+                Width="20"
+                Click="TblBtn_Click6" Margin="411,231,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Button x:Name="TblBtn7"
-                Grid.Row="2" 
+                Grid.Row="1" 
                 Opacity="0.7" 
                 Visibility="Visible"
                 FontWeight="Bold" 
                 FontStyle="Italic"
-                Grid.Column="1"
                 Content="7"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click7"/>
+                FontSize="10"
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click7" Margin="411,149,369,259"/>
         <Button x:Name="TblBtn8"
-                Grid.Row="2"
-                Grid.Column="2"
+                Grid.Row="1"
                 Content="8" 
                 Opacity="0.7" 
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Visibility="Visible"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click8"/>
+                FontSize="10"
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click8" Margin="327,295,453,113"/>
         <Button x:Name="TblBtn9"
-                Grid.Row="2"
-                Grid.Column="3"
+                Grid.Row="1"
                 Content="9" 
                 Opacity="0.7" 
                 Visibility="Visible"
                 FontWeight="Bold" 
                 FontStyle="Italic"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click9"/>
+                FontSize="10"
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click9" Margin="323,231,457,177"/>
         <Button x:Name="TblBtn10"
-                Grid.Row="2"
-                Grid.Column="4" 
+                Grid.Row="1" 
                 Opacity="0.7" 
                 Visibility="Visible"
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Content="10"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click10"/>
+                FontSize="10"
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click10" Margin="313,133,467,275"/>
         <Button x:Name="TblBtn11"
-                Grid.Row="3"
+                Grid.Row="1"
                 Content="11" 
                 Opacity="0.7" 
                 Visibility="Visible"
                 FontWeight="Bold" 
                 FontStyle="Italic"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click11"/>
+                FontSize="10"
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click11" Margin="247,234,533,174"/>
         <Button x:Name="TblBtn12"
-                Grid.Row="3"
-                Grid.Column="1"
+                Grid.Row="1"
                 Content="12" 
                 Opacity="0.7" 
                 Visibility="Visible"
-                FontSize="30"
+                FontSize="10"
                 FontWeight="Bold" 
                 FontStyle="Italic"
-                Margin="10" 
-                Click="TblBtn_Click12"/>
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click12" Margin="243,129,537,279"/>
         <Button x:Name="TblBtn13"
-                Grid.Row="3"
-                Grid.Column="2"
+                Grid.Row="1"
                 Content="13" 
                 Opacity="0.7" 
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Visibility="Visible"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click13"/>
+                FontSize="10"
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click13" Margin="128,145,652,263"/>
         <Button x:Name="TblBtn14"
-                Grid.Row="3"
-                Grid.Column="3"
+                Grid.Row="1"
                 Content="14"
-                FontSize="30" 
+                FontSize="10" 
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Opacity="0.7" 
                 Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click14"/>
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click14" Margin="121,214,659,194"/>
         <Button x:Name="TblBtn15"
-                Grid.Row="3"
-                Grid.Column="4"
+                Grid.Row="1"
                 Content="15"
-                FontSize="30" 
+                FontSize="10" 
                 FontWeight="Bold" 
                 FontStyle="Italic"
                 Opacity="0.7" 
                 Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click15"/>
-        <Button x:Name="TblBtn16"
-                Grid.Row="4"
-                Content="16"
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                FontSize="30" 
-                Opacity="0.7" 
-                Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click16"/>
-        <Button x:Name="TblBtn17"
-                Grid.Row="4"
-                Grid.Column="1"
-                Content="17" 
-                Opacity="0.7" 
-                Visibility="Visible"
-                FontSize="30"
-                Margin="10" 
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                Click="TblBtn_Click17"/>
-        <Button x:Name="TblBtn18"
-                Grid.Row="4"
-                Grid.Column="2"
-                Content="18" 
-                Opacity="0.7" 
-                Visibility="Visible"
-                FontSize="30"
-                Margin="10" 
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                Click="TblBtn_Click18"/>
-        <Button x:Name="TblBtn19"
-                Grid.Row="4"
-                Grid.Column="3" 
-                Opacity="0.7" 
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                Visibility="Visible"
-                Content="19"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click19"/>
-        <Button x:Name="TblBtn20"
-                Grid.Row="4"
-                Grid.Column="4"
-                Content="20"
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                FontSize="30" 
-                Opacity="0.7" 
-                Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click20"/>
-        <Button x:Name="TblBtn21"
-                Grid.Row="5"
-                Content="21"
-                FontSize="30" 
-                Opacity="0.7" 
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click21"/>
-        <Button x:Name="TblBtn22"
-                Grid.Row="5"
-                Grid.Column="1"
-                Content="22"
-                FontSize="30" 
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                Opacity="0.7" 
-                Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click22"/>
-        <Button x:Name="TblBtn23"
-                Grid.Row="5"
-                Grid.Column="2"
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                Content="23" 
-                Opacity="0.7" 
-                Visibility="Visible"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click23"/>
-        <Button x:Name="TblBtn24"
-                Grid.Row="5"
-                Grid.Column="3"
-                Content="24"
-                FontSize="30" 
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                Opacity="0.7" 
-                Visibility="Visible"
-                Margin="10" 
-                Click="TblBtn_Click24"/>
-        <Button x:Name="TblBtn25"
-                Grid.Row="5"
-                Grid.Column="4"
-                Content="25" 
-                Opacity="0.7" 
-                FontWeight="Bold" 
-                FontStyle="Italic"
-                Visibility="Visible"
-                FontSize="30"
-                Margin="10" 
-                Click="TblBtn_Click25"/>
+                Height="20"
+                Width="20"
+                Click="TblBtn_Click15" Margin="247,293,533,115"/>
     </Grid>
 </Page>
